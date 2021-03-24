@@ -24,6 +24,20 @@ Ctrl + d
 Once connected, navigate to ```/newtera/phil/scam/work/```
 
 
+* start the container with
+* `docker run -p 8445:8888 -v /newtera/phil/scam:/home/scam/work -d scam_tutorial_v1.2`
+* check if it's runnning with 
+  `docker ps`
+* log in from a terminal with:
+  `docker exec -it friendly_goldwasser /bin/bash`
+
+* path to cases inside the container is:
+  `/opt/ncar/cesm2/inputdata/atm/cam/iop`
+
+* run a case with `/home/scam/create_scam6_iop`
+
+CGILS S11 reference paper:  https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013MS000246
+
 Use ```scopy``` (copy the work folder to local directory?)
 ```
 $ scp -r n7comp:/newtera/phil/scam/work .
