@@ -24,7 +24,7 @@ Ctrl + d
 Once connected, navigate to ```/newtera/phil/scam/work/```
 
 
-* start the container with
+* start the container with (if it's not already running)
 * `docker run -p 8445:8888 -v /newtera/phil/scam:/home/scam/work -d scam_tutorial_v1.2`
 * check if it's runnning with 
   `docker ps`
@@ -32,7 +32,7 @@ Once connected, navigate to ```/newtera/phil/scam/work/```
   `docker exec -it friendly_goldwasser /bin/bash`
 
 * path to cases inside the container is:
-  `/opt/ncar/cesm2/inputdata/atm/cam/iop`
+  `/opt/ncar/inputdata/atm/cam/scam/iop`
 
 * run a case with `/home/scam/create_scam6_iop`
 
@@ -43,7 +43,7 @@ Use ```scopy``` (copy the work folder to local directory?)
 $ scp -r n7comp:/newtera/phil/scam/work .
 ```
 
-Connect to node07 or node07 compstaff from VScode
+Connect to node07 or node07 compstaff from VScode -- *not currently working*
 
 open vscode, ```ctrl + p``` and select ```SSH connect to host```
 
