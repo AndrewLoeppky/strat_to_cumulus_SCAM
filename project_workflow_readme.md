@@ -36,12 +36,20 @@ Once connected, navigate to ```/newtera/phil/scam/work/```
 
 * run a case with `/home/scam/create_scam6_iop`
 
+* once case completes, `cd /newtera/phil/scam`
+
+* locate the output with `find . -iname "*<runname>*nc -ls`
+
+* copy the path into a version of `rscam.ipynb` and explore with python/xarray
+
 CGILS S11 reference paper:  https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013MS000246
 
 Use ```scopy``` (copy the work folder to local directory?)
 ```
 $ scp -r n7comp:/newtera/phil/scam/work .
 ```
+
+
 
 Connect to node07 or node07 compstaff from VScode -- *not currently working*
 
