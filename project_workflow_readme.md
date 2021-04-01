@@ -63,3 +63,9 @@ select ```n7``` or ```n7comp```
 ## SCAM Tutorial
 
  https://www.dropbox.com/sh/c9lketehyo6ywdn/AACPkcDX-oF5yA5zYN-pb7aJa?dl=0
+
+ ## TODO
+
+ * do problem set 3, exercise 2 - modulating radiative forcing, maybe stop the sun too
+
+* run cgilsS11 (statoculumus), S12 (coastal stratus), S6 (trade cumulus)
