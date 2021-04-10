@@ -35,6 +35,12 @@ Ctrl + d
 
 * run the case with `/home/scam/create_scam6_iop`, replace `create_scam6_iop` with your own case
 
+* if you encounter "permission denied" error, do the following:
+  * ```$ ls -ltd *``` to see file permissions. ```x``` is probably missing
+  * ```$ chmod +x <name of model run>``` to enable execute permission
+  * check it worked with ```$ ls -ltd *```, there should be an ```x``` where there was once a ```-```
+  * try running the case again
+
 * currently, output is stored at `/home/scam/work/cases/` inside the container
 
 * or, locate the output outside with `find . -iname "*<runname>*nc -ls`, it will look something like: `./cases/tutorial.FSCAM.cgilsS11/run/tutorial.FSCAM.cgilsS11.cam.h0.1997-07-15-00000.nc`
@@ -64,8 +70,24 @@ select ```n7``` or ```n7comp```
 
  https://www.dropbox.com/sh/c9lketehyo6ywdn/AACPkcDX-oF5yA5zYN-pb7aJa?dl=0
 
- ## TODO
+## TODO
 
- * do problem set 3, exercise 2 - modulating radiative forcing, maybe stop the sun too
+* read and plot init files for S6, S11, S12
 
-* run cgilsS11 (statoculumus), S12 (coastal stratus), S6 (trade cumulus)
+* convert netcdf to nparray or similar, read back in to directory
+
+* read init files, write them back out, confirm they have the same results (xarray netcdfwriter)
+
+* plot subsidence, wv flux, sensible latent heat flux, initial temp profile, radiative forcinfg, upstream advection
+
+* from the init files and during the runs
+
+* RESEARCH question: What causes the transistion from s11 to s6, what is deiving the stratocumulous to cumulous transition? are the dynamics accurately represented in the model (no, boundary layer is wrong)
+
+* turn on and off drizzle, increase/decrease coelescence efficiency. equivalently, less cloud droplets so they get bigger
+
+* modulate subsidence, klein line, see if cloud layer breaks up
+
+* models are overpredicting cloud cover, we suspect the BL scheme is lacking 
+
+* look at european centre lecture series on this subject
